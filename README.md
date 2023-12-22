@@ -1,7 +1,7 @@
 # Local build setup
 
 Before you start:
-- Make sure you're at node 9.11.2 or higher (`nvm install 9.11.2` `nvm use 9.11.2`)
+- Make sure you're at node 11.11.2 or higher (`nvm install 11.11.2` `nvm use 11.11.2`)
 - Make sure gulp is installed globally (`npm install gulp -g`)
 
 Setup for Local
