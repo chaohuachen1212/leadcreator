@@ -8,17 +8,6 @@ $containerMax: 1200;
   position: relative;
 }
 
-body, html {
-  position: relative;
-
-  &.is-locked {
-    position: relative;
-    height: 100%;
-    overflow: hidden;
-  }
-}
-
-
 .container {
   width: 90%;
   margin: 0 auto;

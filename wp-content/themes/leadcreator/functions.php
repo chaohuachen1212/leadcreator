@@ -178,36 +178,3 @@ function smartwp_remove_wp_block_library_css(){
   wp_dequeue_style( 'wp-block-library-theme' );
  }
  add_action( 'wp_enqueue_scripts', 'smartwp_remove_wp_block_library_css', 100 );
-
-if (!empty(get_field('google_api_key', 'option'))) {
-  add_action('init', function() {
-      $googleMapsApiKey  = get_field('google_api_key', 'option');
-      define('GOOGLE_MAPS_KEY', $googleMapsApiKey);
-  });
-}
-
-add_action('wp_enqueue_scripts', function () {
-
-  wp_enqueue_script('pg-map-style', get_theme_file_uri('dev/js/modules/map-style.js'), [], '1.0', true);
-  wp_enqueue_script('single-location-map', get_theme_file_uri('dev/js/modules/single-location-map.js'), ['pg-map-style'], '1.0', true);
-  wp_script_add_data('single-location-map', 'defer', true);
-
-  if (defined('GOOGLE_MAPS_KEY') && GOOGLE_MAPS_KEY) {
-    $args = [
-      'key'      => GOOGLE_MAPS_KEY,
-      'callback' => 'initMap',
-      'v'        => 'weekly',
-      'loading'  => 'async',
-    ];
-
-    if (defined('GOOGLE_MAPS_MAP_ID') && GOOGLE_MAPS_MAP_ID) {
-      $args['libraries'] = 'marker';
-    }
-
-    $src = add_query_arg($args, 'https://maps.googleapis.com/maps/api/js');
-    wp_enqueue_script('google-maps', $src, ['single-location-map'], null, true);
-    wp_script_add_data('google-maps', 'defer', true);
-  }
-});
-
-

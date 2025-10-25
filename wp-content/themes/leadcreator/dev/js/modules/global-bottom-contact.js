@@ -1,20 +1,20 @@
 (function($) {
 
-  function wechatPopup() {
-    var wechatBtn = $('.contact--block .wechat-btn');
-    var close = $('.wechat--popup-block .close')
 
-    wechatBtn.click(function(){
-      $('.wechat--popup-block').addClass('is-active');
-    });
+  function findFooterHight(){
+    var footerH = $('footer').outerHeight();
+    var btnContactSec = $('.global--bottom-contact').outerHeight();
+    var totalHight = footerH + btnContactSec;
 
-    close.click(function(){
-      $('.wechat--popup-block').removeClass('is-active');
-    });
+    console.log(btnContactSec);
 
+    $('.global--bottom-contact .bg-img').height(totalHight);
   }
 
-  wechatPopup();
-  
+  findFooterHight();
+
+   $(window).resize(function(){
+     findFooterHight();
+   });
 
 }(jQuery));
