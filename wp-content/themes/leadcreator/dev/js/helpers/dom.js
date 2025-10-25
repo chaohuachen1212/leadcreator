@@ -1,58 +1,58 @@
-const getOffsetTop = elem => {
+const getOffsetTop = (elem) => {
   // get offset top relative to document
-  const rect = elem.getBoundingClientRect()
-  const scrollTop = window.pageYOffset || document.documentElement.scrollTop
-  return rect.top + scrollTop
-}
+  const rect = elem.getBoundingClientRect();
+  const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  return rect.top + scrollTop;
+};
 
-const getIndex = el => (
-  Array.from(el.parentNode.children).indexOf(el)
-)
+const getIndex = (el) => Array.from(el.parentNode.children).indexOf(el);
 
 const getAncestor = (el, className) => {
-
   while ((el = el.parentElement) && !el.classList.contains(className));
 
-  return el
-}
+  return el;
+};
 
 const getScrollTop = () => {
-  const top = window.scrollY || document.documentElement.scrollTop
-  return top
-}
+  const top = window.scrollY || document.documentElement.scrollTop;
+  return top;
+};
 
 const getUrlParameter = () => {
-  let vars = {}
-  let parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
-      vars[key] = value
-  })
-  return vars
-}
+  let vars = {};
+  let parts = window.location.href.replace(
+    /[?&]+([^=&]+)=([^&]*)/gi,
+    function (m, key, value) {
+      vars[key] = value;
+    }
+  );
+  return vars;
+};
 
 const isTouchDevice = () => {
-  return 'ontouchstart' in document.documentElement
-}
+  return 'ontouchstart' in document.documentElement;
+};
 
-const isJson = str => {
+const isJson = (str) => {
   try {
-    JSON.parse(str)
+    JSON.parse(str);
   } catch (e) {
-    return false
+    return false;
   }
-  return true
-}
+  return true;
+};
 
-const cumulativeOffset = element => {
-  let top = 0
-  let left = 0
+const cumulativeOffset = (element) => {
+  let top = 0;
+  let left = 0;
   do {
-    top += element.offsetTop || 0
-    left += element.offsetLeft || 0
-    element = element.offsetParent
-  } while (element)
+    top += element.offsetTop || 0;
+    left += element.offsetLeft || 0;
+    element = element.offsetParent;
+  } while (element);
 
-  return { top, left }
-}
+  return {top, left};
+};
 
 export {
   getOffsetTop,
@@ -62,5 +62,5 @@ export {
   getUrlParameter,
   isTouchDevice,
   isJson,
-  cumulativeOffset
-}
+  cumulativeOffset,
+};

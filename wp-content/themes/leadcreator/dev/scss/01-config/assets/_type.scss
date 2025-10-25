@@ -1,0 +1,192 @@
+/* update me */
+$fontLight: 300;
+$fontRegular: 500;
+$fontSemiBold: 600;
+$fontBold: 700;
+
+$base-font:   'Inter';
+$headingFont: 'Inter';
+$avenir-font: 'Avenir Next';
+
+html, body {
+  font-family: $base-font;  
+  color: $globalPcolor;
+  font-weight: 400;
+}
+
+@mixin heading {
+  font-family: $headingFont;
+  font-weight: $fontSemiBold;
+  line-height: 1.2em;
+}
+
+@mixin heading-caps {
+  font-family: $headingFont;
+  font-weight: $fontSemiBold;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+@mixin heading-xxl {
+  @include heading;
+
+  --fontSize: 36;
+
+  @media (min-width: #{$tm}px) {
+    --fontSize: 64;
+  }
+}
+
+@mixin heading--xl {
+  @include heading;
+
+  --fontSize: 32;
+
+  @media (min-width: #{$tm}px) {
+    --fontSize: 48;
+  }
+}
+
+@mixin heading--l {
+  @include heading;
+
+  --fontSize: 24;
+
+  @media (min-width: #{$tm}px) {
+    --fontSize: 36;
+  }
+}
+
+@mixin heading--m {
+  @include heading;
+
+  --fontSize: 22;
+
+  @media (min-width: #{$tm}px) {
+    --fontSize: 30;
+  }
+}
+
+@mixin heading--s {
+  @include heading;
+
+  --fontSize: 20;
+
+  @media (min-width: #{$tm}px) {
+    --fontSize: 24;
+  }
+}
+
+@mixin heading--xs {
+  @include heading;
+
+  --fontSize: 18;
+
+  @media (min-width: #{$tm}px) {
+    --fontSize: 20;
+  }
+}
+
+@mixin body--l {
+  --fontSize: 16;
+
+  @media (min-width: #{$tm}px) {
+    --fontSize: 18;
+  }
+}
+
+@mixin body--m {
+  --fontSize: 14;
+
+  @media (min-width: #{$tm}px) {
+    --fontSize: 16;
+  }
+}
+
+@mixin body--s {
+  --fontSize: 12;
+
+  @media (min-width: #{$tm}px) {
+    --fontSize: 14;
+  }
+}
+
+@mixin body--xs {
+  --fontSize: 11;
+
+  @media (min-width: #{$tm}px) {
+    --fontSize: 12;
+  }
+}
+
+@mixin body--xxs {
+  --fontSize: 10;
+
+  @media (min-width: #{$tm}px) {
+    --fontSize: 11;
+  }
+}
+
+
+
+
+@mixin caps--l {
+  @include heading-caps;
+
+  --fontSize: 12;
+
+  @media (min-width: #{$tm}px) {
+    --fontSize: 16;
+  }
+}
+
+@mixin caps--m {
+  @include heading-caps;
+
+  --fontSize: 12;
+
+  @media (min-width: #{$tm}px) {
+    --fontSize: 16;
+  }
+}
+
+@mixin caps--s {
+  @include heading-caps;
+
+  --fontSize: 12;
+
+  @media (min-width: #{$tm}px) {
+    --fontSize: 14;
+  }
+}
+
+@mixin caps--xs {
+  @include heading-caps;
+
+  --fontSize: 11;
+
+  @media (min-width: #{$tm}px) {
+    --fontSize: 12;
+  }
+}
+
+@mixin caps--xxs {
+  @include heading-caps;
+
+  --fontSize: 10;
+
+  @media (min-width: #{$tm}px) {
+    --fontSize: 11;
+  }
+}
+
+
+@mixin caps--xxxs {
+  @include heading-caps;
+
+  --fontSize: 9;
+
+  @media (min-width: #{$tm}px) {
+    --fontSize: 10;
+  }
+}

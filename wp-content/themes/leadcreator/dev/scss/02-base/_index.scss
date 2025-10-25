@@ -1,0 +1,18 @@
+@import '../../node_modules/kni-scss/scss/02-base';
+@import 'assets/color-classes';
+@import 'assets/flex';
+@import 'assets/layout';
+@import 'assets/type-classes';
+
+*,
+*::after,
+*::before {
+  -moz-osx-font-smoothing: grayscale;
+
+  /* keep scaling for tablet ranges */
+  @media (min-width: #{$tm}px) and (max-width: #{$tl}px) {
+    --siteMin: #{$tm};
+    --siteBasis: #{$dm};
+    --siteMax: #{$tl};
+  }
+}

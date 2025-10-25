@@ -1,0 +1,31 @@
+// edit per project
+.btn {
+  @include caps--s;
+  display: inline-block;
+  position: relative;
+  padding: 15pxv 25pxv;
+  line-height: 140%;
+  font-family: $base-font;
+  font-weight: 700;
+  color: $white;
+  text-align: center;
+  background-color: $dark-blue;
+  text-decoration: none;
+  letter-spacing: 0.06em;
+  text-transform: none;
+  user-select: none;
+  border: 2pxv solid $dark-blue;
+  border-radius: 100px;
+  box-shadow: none;
+  overflow: hidden;
+
+  z-index: 1;
+  cursor: pointer;
+  transition: all 800ms $easing;
+
+  &:hover {
+    background-color: $white;
+    color: $dark-blue;
+
+  }
+}

@@ -1,0 +1,134 @@
+footer {
+  padding: 62pxv 0 100pxv;
+  background: #132D4C;
+
+  @media (max-width: #{$tm}px) {
+    padding: 60px 0 70pxv;
+  }
+
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .logo-wrap {
+    width: 25%;
+
+    @include bb {
+      width: 100%;
+      margin-bottom: 35pxv;
+    }
+
+     .logo {
+        
+      img {
+        width: 191pxv;
+        margin-top: -30pxv;
+
+        @include bb {
+          margin-top: -10pxv;
+        }
+
+
+        @include bb {
+          max-width: 151pxv;
+        }
+      }
+    }
+
+    p {
+      font-size: 20pxv;
+      color: $white;
+      max-width: 145pxv;
+      margin-left: 45pxv;
+      line-height: 150%;
+
+      @include bb {
+        margin-left: 0;
+      }
+    }
+  }
+
+  .footer-nav {
+    width: 73%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    @include bb {
+      width: 100%;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    li {
+       &:not(:last-child) {
+        margin-bottom: 25px;
+       }
+
+       a {
+        &:hover {
+          text-decoration: underline;
+        }
+       }
+    }
+
+    a, span {
+      color: $white;
+      font-size: 20pxv;
+    }
+
+    span {
+      font-weight: bold;
+    }
+
+    .location-cols {
+      width: 55%;
+
+      @include bb {
+        width: 100%;
+      }
+
+      .cols-wrap {
+        display: flex;
+        flex-wrap: wrap;
+
+
+        .col {
+          width: 50%;
+
+          @include bb {
+            width: 100%;
+            &:not(:last-child) {
+              margin-bottom: 25pxv;
+            }
+          }
+        }
+      }
+    }
+
+    .contact-col {
+      width: 35%;
+
+      @include bb {
+        width: 100%;
+        margin-top: 35pxv;
+      }
+    }
+  }
+
+  h3 {
+    font-size: 20pxv;
+    color: $white;
+    margin-bottom: 45pxv;
+
+    @include bb {
+      margin-bottom: 35pxv;
+    }
+  }
+
+
+}

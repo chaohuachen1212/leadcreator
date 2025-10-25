@@ -1,0 +1,83 @@
+.contact--block {
+	padding: 120pxv 0;
+	border-top: 2pxv solid $border2;
+
+	@include bb {
+		padding: 85pxv 0;
+	}
+
+	.btn-wraps {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+
+	.btn {
+		font-size: 32pxv;
+		min-width: 316pxv;
+		padding: 20pxv 25pxv;
+
+		@include bb {
+			font-size: 26pxv;
+		}
+
+		@include bb {
+			width: 100%;
+			min-width: 100%;
+
+			&:not(:last-child) {
+				margin-bottom: 40pxv;
+			}
+		}
+	}
+}
+
+.wechat--popup-block{
+	position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(36, 32, 32, 0.6);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+    z-index: 99;
+    display: none;
+
+    &.is-active {
+    	display: block;
+    	opacity: 1;
+    	visibility: visible;
+    }
+
+
+    img {
+    	position: absolute;
+	    top: 50%;
+	    left: 50%;
+	    width: auto;
+	    max-height: 85vh;
+	    transform: translate(-50%, -50%);
+	    transform-origin: center center;
+	    transition: transform 0.5s;
+    }
+
+    .close {
+    	position: absolute;
+    	right: 5%;
+    	top: 35pxv;
+    	cursor: pointer;
+
+    	span {
+    		color: $white;
+    		font-size: 45pxv;
+    	}
+
+    	&:hover {
+    		span {
+    			opacity: 0.5;
+    		}
+    	}
+    }
+}

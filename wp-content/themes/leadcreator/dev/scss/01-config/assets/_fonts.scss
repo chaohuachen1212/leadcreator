@@ -1,0 +1,416 @@
+@font-face {
+  font-family: 'Centra Mono Trial';
+  src: url('fonts/centra/CentraMonoTrial-BoldItalic.woff2') format('woff2'),
+      url('fonts/centra/CentraMonoTrial-BoldItalic.woff') format('woff');
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Centra Mono Trial';
+  src: url('fonts/centra/CentraMonoTrial-MediumItalic.woff2') format('woff2'),
+      url('fonts/centra/CentraMonoTrial-MediumItalic.woff') format('woff');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Centra No1 TRIAL';
+  src: url('fonts/centra/CentraNo1TRIAL-BlackItalic.woff2') format('woff2'),
+      url('fonts/centra/CentraNo1TRIAL-BlackItalic.woff') format('woff');
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Centra Mono Trial';
+  src: url('fonts/centra/CentraMonoTrial-Medium.woff2') format('woff2'),
+      url('fonts/centra/CentraMonoTrial-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Centra Mono Trial';
+  src: url('fonts/centra/CentraMonoTrial-Book.woff2') format('woff2'),
+      url('fonts/centra/CentraMonoTrial-Book.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Centra Mono Trial';
+  src: url('fonts/centra/CentraMonoTrial-Italic.woff2') format('woff2'),
+      url('fonts/centra/CentraMonoTrial-Italic.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Centra Mono Trial';
+  src: url('fonts/centra/CentraMonoTrial-Light.woff2') format('woff2'),
+      url('fonts/centra/CentraMonoTrial-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Centra Mono Trial';
+  src: url('fonts/centra/CentraMonoTrial-LightItalic.woff2') format('woff2'),
+      url('fonts/centra/CentraMonoTrial-LightItalic.woff') format('woff');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Centra No1 TRIAL';
+  src: url('fonts/centra/CentraNo1TRIAL-Bold.woff2') format('woff2'),
+      url('fonts/centra/CentraNo1TRIAL-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Centra Mono Trial';
+  src: url('fonts/centra/CentraMonoTrial-Bold.woff2') format('woff2'),
+      url('fonts/centra/CentraMonoTrial-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Centra No1 TRIAL';
+  src: url('fonts/centra/CentraNo1TRIAL-Black.woff2') format('woff2'),
+      url('fonts/centra/CentraNo1TRIAL-Black.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Centra No1 TRIAL';
+  src: url('fonts/centra/CentraNo1TRIAL-BoldItalic.woff2') format('woff2'),
+      url('fonts/centra/CentraNo1TRIAL-BoldItalic.woff') format('woff');
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Centra No1 TRIAL';
+  src: url('fonts/centra/CentraNo1TRIAL-Extrabold.woff2') format('woff2'),
+      url('fonts/centra/CentraNo1TRIAL-Extrabold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Centra No1 TRIAL Hairline';
+  src: url('fonts/centra/CentraNo1TRIAL-HairlineItalic.woff2') format('woff2'),
+      url('fonts/centra/CentraNo1TRIAL-HairlineItalic.woff') format('woff');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Centra No1 TRIAL Hairline';
+  src: url('fonts/centra/CentraNo1TRIAL-Hairline.woff2') format('woff2'),
+      url('fonts/centra/CentraNo1TRIAL-Hairline.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Centra No1 TRIAL';
+  src: url('fonts/centra/CentraNo1TRIAL-Book.woff2') format('woff2'),
+      url('fonts/centra/CentraNo1TRIAL-Book.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Centra No1 TRIAL';
+  src: url('fonts/centra/CentraNo1TRIAL-ExtraboldItalic.woff2') format('woff2'),
+      url('fonts/centra/CentraNo1TRIAL-ExtraboldItalic.woff') format('woff');
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Centra No1 TRIAL';
+  src: url('fonts/centra/CentraNo1TRIAL-BookItalic.woff2') format('woff2'),
+      url('fonts/centra/CentraNo1TRIAL-BookItalic.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+
+
+@font-face {
+  font-family: 'Centra No1 TRIAL';
+  src: url('fonts/centra/CentraNo1TRIAL-LightItalic.woff2') format('woff2'),
+      url('fonts/centra/CentraNo1TRIAL-LightItalic.woff') format('woff');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Centra No1 TRIAL';
+  src: url('fonts/centra/CentraNo1TRIAL-ThinItalic.woff2') format('woff2'),
+      url('fonts/centra/CentraNo1TRIAL-ThinItalic.woff') format('woff');
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Centra No2 TRIAL';
+  src: url('fonts/centra/CentraNo2TRIAL-BoldItalic.woff2') format('woff2'),
+      url('fonts/centra/CentraNo2TRIAL-BoldItalic.woff') format('woff');
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Centra No2 TRIAL';
+  src: url('fonts/centra/CentraNo2TRIAL-Extrabold.woff2') format('woff2'),
+      url('fonts/centra/CentraNo2TRIAL-Extrabold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Centra No2 TRIAL';
+  src: url('fonts/centra/CentraNo2TRIAL-Bold.woff2') format('woff2'),
+      url('fonts/centra/CentraNo2TRIAL-Bold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Centra No1 TRIAL';
+  src: url('fonts/centra/CentraNo1TRIAL-Light.woff2') format('woff2'),
+      url('fonts/centra/CentraNo1TRIAL-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Centra No2 TRIAL';
+  src: url('fonts/centra/CentraNo2TRIAL-BookItalic.woff2') format('woff2'),
+      url('fonts/centra/CentraNo2TRIAL-BookItalic.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Centra No2 TRIAL';
+  src: url('fonts/centra/CentraNo2TRIAL-Book.woff2') format('woff2'),
+      url('fonts/centra/CentraNo2TRIAL-Book.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Centra No1 TRIAL';
+  src: url('fonts/centra/CentraNo1TRIAL-Thin.woff2') format('woff2'),
+      url('fonts/centra/CentraNo1TRIAL-Thin.woff') format('woff');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Centra No1 TRIAL';
+  src: url('fonts/centra/CentraNo1TRIAL-MediumItalic.woff2') format('woff2'),
+      url('fonts/centra/CentraNo1TRIAL-MediumItalic.woff') format('woff');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Centra No2 TRIAL';
+  src: url('fonts/centra/CentraNo2TRIAL-Black.woff2') format('woff2'),
+      url('fonts/centra/CentraNo2TRIAL-Black.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Centra No1 TRIAL';
+  src: url('fonts/centra/CentraNo1TRIAL-Medium.woff2') format('woff2'),
+      url('fonts/centra/CentraNo1TRIAL-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Centra No2 TRIAL';
+  src: url('fonts/centra/CentraNo2TRIAL-BlackItalic.woff2') format('woff2'),
+      url('fonts/centra/CentraNo2TRIAL-BlackItalic.woff') format('woff');
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Centra No2 TRIAL';
+  src: url('fonts/centra/CentraNo2TRIAL-Medium.woff2') format('woff2'),
+      url('fonts/centra/CentraNo2TRIAL-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Centra No2 TRIAL Hairline';
+  src: url('fonts/centra/CentraNo2TRIAL-HairlineItalic.woff2') format('woff2'),
+      url('fonts/centra/CentraNo2TRIAL-HairlineItalic.woff') format('woff');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Centra No2 TRIAL';
+  src: url('fonts/centra/CentraNo2TRIAL-MediumItalic.woff2') format('woff2'),
+      url('fonts/centra/CentraNo2TRIAL-MediumItalic.woff') format('woff');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Centra No2 TRIAL';
+  src: url('fonts/centra/CentraNo2TRIAL-Thin.woff2') format('woff2'),
+      url('fonts/centra/CentraNo2TRIAL-Thin.woff') format('woff');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Centra No2 TRIAL';
+  src: url('fonts/centra/CentraNo2TRIAL-LightItalic.woff2') format('woff2'),
+      url('fonts/centra/CentraNo2TRIAL-LightItalic.woff') format('woff');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Centra No2 TRIAL';
+  src: url('fonts/centra/CentraNo2TRIAL-ExtraboldItalic.woff2') format('woff2'),
+      url('fonts/centra/CentraNo2TRIAL-ExtraboldItalic.woff') format('woff');
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Centra No2 TRIAL Hairline';
+  src: url('fonts/centra/CentraNo2TRIAL-Hairline.woff2') format('woff2'),
+      url('fonts/centra/CentraNo2TRIAL-Hairline.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Centra No2 TRIAL';
+  src: url('fonts/centra/CentraNo2TRIAL-ThinItalic.woff2') format('woff2'),
+      url('fonts/centra/CentraNo2TRIAL-ThinItalic.woff') format('woff');
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Centra No2 TRIAL';
+  src: url('fonts/centra/CentraNo2TRIAL-Light.woff2') format('woff2'),
+      url('fonts/centra/CentraNo2TRIAL-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('fonts/Inter-Regular.woff2') format('woff2'),
+        url('fonts/Inter-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('fonts/Inter-SemiBold.woff2') format('woff2'),
+        url('fonts/Inter-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('fonts/Inter-Medium.woff2') format('woff2'),
+        url('fonts/Inter-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('fonts/Inter-Bold.woff2') format('woff2'),
+        url('fonts/Inter-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('fonts/Inter-Black.woff2') format('woff2'),
+        url('fonts/Inter-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('fonts/Inter-Light.woff2') format('woff2'),
+        url('fonts/Inter-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+

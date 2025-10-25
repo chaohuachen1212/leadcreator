@@ -1,0 +1,134 @@
+h1,
+.heading--xxl {
+  @include heading-xxl;
+}
+
+h2,
+.heading--xl {
+  @include heading--xl;
+}
+
+h3,
+.heading--l {
+  @include heading--l;
+}
+
+h4,
+.heading--m {
+  @include heading--m;
+}
+
+h5,
+.heading--s {
+  @include heading--s;
+}
+
+h6,
+.heading--xs {
+  @include heading--xs;
+}
+
+.body--l {
+  @include body--l;
+}
+
+p,
+li,
+.body--m {
+  @include body--m;
+}
+
+.body--s {
+  @include body--s;
+}
+
+.body--xs {
+  @include body--xs;
+}
+
+.body--xxs {
+  @include body--xxs;
+}
+
+
+.caps--l {
+  @include caps--l;
+}
+
+.caps--m {
+  @include caps--m;
+}
+
+.caps--s {
+  @include caps--s;
+}
+
+.caps--xs {
+  @include caps--xs;
+}
+
+.caps--xxs {
+  @include caps--xxs;
+}
+
+.caps--xxxs {
+  @include caps--xxs;
+}
+
+
+.text-center {
+  text-align: center;
+}
+
+.inherit {
+  p {
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+    color: inherit;
+
+    strong,
+    a {
+      font-size: inherit;
+    }
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+blockquote,
+p,
+li {
+  text-wrap: pretty;
+}
+
+blockquote,
+p,
+li {
+  line-height: 1.38em;
+}
+
+a {
+  text-decoration: inherit;
+}
+
+.wrap-balance {
+  text-wrap: balance;
+}
+
+.wrap-normal {
+  text-wrap: wrap;
+}
+
+
+.text-center {
+  text-align: center;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}

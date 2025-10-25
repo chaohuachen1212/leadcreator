@@ -1,0 +1,174 @@
+header {
+  background: $dark-blue;
+  z-index: 2;
+
+  .logo-wrap {
+
+    
+    @include bb {
+      width: 100%;
+      overflow: hidden;
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &.is-active {
+    @include bb {
+      height: 100vh;
+      align-items: flex-start;
+      width: 100%;
+      background-color: $dark-blue;
+
+      nav {
+        display: block;
+
+        a {
+          color: $white;
+        }
+      }
+
+      .btn-wrap {
+        display: flex;
+        padding-left: 0;
+        width: 100%;
+        justify-content: flex-start;
+        padding: 0 5%;
+      }
+    }
+  }
+
+
+
+  .logo {
+    max-width: 194pxv;
+
+    img {
+      width: 191pxv;
+      height: 133pxv;
+
+      @include bb {
+        width: 150pxv;
+        height: auto;
+      }
+    }
+  }
+
+  nav {
+
+    @include bb {
+      display: none;
+      border-top: 1pxv solid $white;
+      padding: 80pxv 5% 40pxv;
+      width: 100%;
+    }
+
+
+    a {
+      color: $white;
+      font-size: 22pxv;
+      font-weight: 600;
+      transition: 0.35s;
+
+      @include bb {
+        display: block;
+        margin-bottom: 25pxv;
+      }
+
+      &:hover {
+         text-decoration: underline;
+      }
+
+      &:not(:last-child) {
+        margin-right: 40pxv;
+      }
+    }
+  }
+}
+
+
+.sticky-nav {
+  header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    background: linear-gradient(90deg, $dark-blue 33.17%, rgba(45, 105, 178, 0.2) 100%);
+
+    @include bb {
+      background: $dark-blue;
+    }
+  }
+}
+
+
+.hamburger {
+  position: absolute;
+  right: 7pxv;
+  height: 40pxv;
+  width: 40pxv;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(-50%);
+  top: 50%;
+  cursor: pointer;
+
+  @include bb {
+    span {
+      position: relative;
+      display: block;
+      height: 2pxv;
+      width: 20pxv;
+      background-color: $white;
+      transition: all 250ms ease;
+
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        height: 2pxv;
+        width: 20pxv;
+        background-color: $white;
+        transition: all 250ms ease;
+      }
+
+      &::before {
+        top: -5pxv;
+      }
+
+      &::after {
+        bottom: -5pxv;
+      }
+    }
+
+    &.is-active {
+
+      span {
+        height: 0;
+
+        &::before {
+          transform: rotate(45deg);
+          top: -1pxv;
+          background-color: $white
+        }
+
+        &::after {
+          transform: rotate(-45deg);
+          bottom: -1pxv;
+          background-color: $white
+        }
+      }
+    }
+  }
+
+
+
+  @include baa {
+    opacity: 0;
+    visibility: visible;
+    pointer-events: none;
+  }
+}

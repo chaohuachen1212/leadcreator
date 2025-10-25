@@ -1,0 +1,37 @@
+.home--main-content {
+   position: relative;
+   height: 100vh;
+
+   img {
+      position: absolute;
+      object-fit: cover;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%,-50%);
+      height: 100%;
+      width: 100%;
+    }
+
+    .content {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      position: absolute;
+      z-index: 1;
+
+      @include bb {
+         width: 100%;
+         padding: 0 5%;
+      }
+    }
+
+    h1 { 
+      color: $white;
+      margin: 0 auto;
+
+      @include bb {
+         text-align: center;
+      }
+    }
+}

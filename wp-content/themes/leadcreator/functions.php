@@ -1,60 +1,14 @@
-<?php // ==== FUNCTIONS ==== //
+<?php
 
-// Specify custom configuration values in this file; these will override values in `functions-config-defaults.php`
-// The general idea here is to allow for themes to be customized for specific installations
-defined( 'VOIDX_SCRIPTS_PAGELOAD' ) || define( 'VOIDX_SCRIPTS_PAGELOAD', false );
-
-// remove default jquery script wordpress adds into footer
-if (!is_admin()) add_action('wp_enqueue_scripts', 'my_jquery_enqueue', 11);
-function my_jquery_enqueue() {
-  wp_deregister_script('jquery');
-  wp_register_script('jquery', '', '', '', true);
+function theme_enqueue_scripts() {
+  wp_enqueue_style( 'theme-style', get_stylesheet_uri(), $dependencies = array(), filemtime( get_template_directory() . '/style.css' ) );
+  wp_enqueue_script( 'theme-js', get_template_directory_uri() . '/js/index.js', array(), filemtime( get_template_directory() . '/js/index.js' ), true);
 }
-
-// An example of how to manage loading front-end assets (scripts, styles, and fonts)
-require_once( trailingslashit( get_stylesheet_directory() ) . 'inc/assets.php' );
-
-// Only the bare minimum to get the theme up and running
-function voidx_setup() {
-
-  // Language loading
-  load_theme_textdomain( 'voidx', trailingslashit( get_template_directory() ) . 'languages' );
-
-  // HTML5 support; mainly here to get rid of some nasty default styling that WordPress used to inject
-  add_theme_support( 'html5', array( 'search-form', 'gallery' ) );
-
-  // $content_width limits the size of the largest image size available via the media uploader
-  // It should be set once and left alone apart from that; don't do anything fancy with it; it is part of WordPress core
-  global $content_width;
-  if ( !isset( $content_width ) || !is_int( $content_width ) )
-    $content_width = (int) 960;
-
-  // Register header and footer menus
-  register_nav_menu( 'header', __( 'Header menu', 'voidx' ) );
-  register_nav_menu( 'footer', __( 'Footer menu', 'voidx' ) );
-
-}
-add_action( 'after_setup_theme', 'voidx_setup', 11 );
-
-// Sidebar declaration
-function voidx_widgets_init() {
-  register_sidebar( array(
-    'name'          => __( 'Main sidebar', 'voidx' ),
-    'id'            => 'sidebar-main',
-    'description'   => __( 'Appears to the right side of most posts and pages.', 'voidx' ),
-    'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-    'after_widget'  => '</aside>',
-    'before_title'  => '<h2>',
-    'after_title'   => '</h2>'
-  ) );
-}
-add_action( 'widgets_init', 'voidx_widgets_init' );
-
-// toggle admin bar
-show_admin_bar(false);
+add_action( 'wp_enqueue_scripts', 'theme_enqueue_scripts' );
 
 // allows for featured image.
 add_theme_support('post-thumbnails');
+// add_post_type_support('custom-post-type-name', 'thumbnail');
 
 // remove default page editor
 function remove_editor() {
@@ -97,6 +51,7 @@ if (function_exists('acf_add_options_page')) {
     'page_title' => 'Header Settings',
     'menu_title' => 'Header',
     'menu_slug' => 'header',
+    'post_id' => 'header',
     'parent_slug' =>  $parent['menu_slug']
   ));
 
@@ -104,14 +59,155 @@ if (function_exists('acf_add_options_page')) {
     'page_title' => 'Footer Settings',
     'menu_title' => 'Footer',
     'menu_slug' => 'footer',
-    'parent_slug' =>  $parent['menu_slug']
-  ));
-
-  acf_add_options_sub_page(array(
-    'page_title' => 'Cookie Banner',
-    'menu_title' => 'Cookie Banner',
-    'menu_slug' => 'cookie-banner',
-    'post_id' => 'cookie-banner',
+    'post_id' => 'footer',
     'parent_slug' =>  $parent['menu_slug']
   ));
 }
+
+
+
+// convert text into a slug
+function kni_slugify( $string, $remove_numbers = false ) {
+  $string = htmlspecialchars_decode($string);
+  // replace non letter or digits by -
+  $string = preg_replace('~[^\pL\d]+~u', '-', $string);
+
+  // transliterate
+  $string = iconv('utf-8', 'us-ascii//TRANSLIT', $string);
+
+  // remove unwanted characters
+  $string = preg_replace('~[^-\w]+~', '', $string);
+
+  // trim
+  $string = trim($string, '-');
+
+  // remove duplicated - symbols
+  $string = preg_replace('~-+~', '-', $string);
+
+  // lowercase
+  $string = strtolower($string);
+
+  // remove numbers
+
+  if ($remove_numbers) {
+    $string = preg_replace('/[0-9]+/', '', $string);
+  }
+
+  if (empty($string)) {
+    return 'n-a';
+  }
+
+  return $string;
+}
+
+/**
+ * Get primary taxonomy of post
+ * @param int $post_id the id of the post
+ * @param string $taxonomy the taxonomy we want to search
+ */
+function get_primary_category($post_id, $return_name = true) {
+  $post_type = get_post_type($post_id);
+
+  switch ($post_type) {
+    case 'post':
+      $category_name = 'category';
+      break;
+    default:
+      return '';
+  }
+
+  if (class_exists('WPSEO_Primary_Term')) {
+    $wpseo_primary_term = new WPSEO_Primary_Term( $category_name, $post_id );
+    $primary_cat_id = $wpseo_primary_term->get_primary_term();
+  }
+
+  if ($primary_cat_id) {
+    $primary_cat = get_term($primary_cat_id, $category_name);
+
+
+    if (!$return_name) {
+      return $primary_cat;
+    }
+
+    if (isset($primary_cat->name) and 'uncategorized' !== $primary_cat->slug) {
+      return $primary_cat->name;
+    }
+  }
+
+  if (!$return_name) {
+    return null;
+  }
+
+  // if no main category found or if main category is uncategorized
+  switch ($post_type) {
+    case 'post':
+      return 'Blog';
+      break;
+  }
+
+  return null;
+}
+
+// remove forced margin top on html
+function remove_admin_login_header() {
+  remove_action('wp_head', '_admin_bar_bump_cb');
+}
+add_action('get_header', 'remove_admin_login_header');
+
+// don't expose users
+add_filter('rest_endpoints', function ($endpoints) {
+  $removedEndpoints = array(
+    '/wp/v2/users', // User list
+    '/wp/v2/users/(?P<id>[\d]+)' // Specific user lookup
+  );
+
+  foreach ($removedEndpoints as $endpoint) {
+    if (isset($endpoints[$endpoint]))
+      unset($endpoints[$endpoint]);
+  }
+
+  return $endpoints;
+});
+
+// disable block editor
+add_filter('use_block_editor_for_post', '__return_false');
+
+// remove Gutenberg Block Library CSS from loading on the frontend
+function smartwp_remove_wp_block_library_css(){
+  wp_dequeue_style( 'wp-block-library' );
+  wp_dequeue_style( 'wp-block-library-theme' );
+ }
+ add_action( 'wp_enqueue_scripts', 'smartwp_remove_wp_block_library_css', 100 );
+
+if (!empty(get_field('google_api_key', 'option'))) {
+  add_action('init', function() {
+      $googleMapsApiKey  = get_field('google_api_key', 'option');
+      define('GOOGLE_MAPS_KEY', $googleMapsApiKey);
+  });
+}
+
+add_action('wp_enqueue_scripts', function () {
+
+  wp_enqueue_script('pg-map-style', get_theme_file_uri('dev/js/modules/map-style.js'), [], '1.0', true);
+  wp_enqueue_script('single-location-map', get_theme_file_uri('dev/js/modules/single-location-map.js'), ['pg-map-style'], '1.0', true);
+  wp_script_add_data('single-location-map', 'defer', true);
+
+  if (defined('GOOGLE_MAPS_KEY') && GOOGLE_MAPS_KEY) {
+    $args = [
+      'key'      => GOOGLE_MAPS_KEY,
+      'callback' => 'initMap',
+      'v'        => 'weekly',
+      'loading'  => 'async',
+    ];
+
+    if (defined('GOOGLE_MAPS_MAP_ID') && GOOGLE_MAPS_MAP_ID) {
+      $args['libraries'] = 'marker';
+    }
+
+    $src = add_query_arg($args, 'https://maps.googleapis.com/maps/api/js');
+    wp_enqueue_script('google-maps', $src, ['single-location-map'], null, true);
+    wp_script_add_data('google-maps', 'defer', true);
+  }
+});
+
+

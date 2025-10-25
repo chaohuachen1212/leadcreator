@@ -47,7 +47,7 @@ if ( !function_exists( 'voidx_enqueue_scripts' ) ) : function voidx_enqueue_scri
   // The handle is the same for each bundle since we're only loading one script; if you load others be sure to provide a new handle
   // wp_enqueue_script( $script_handle, get_stylesheet_directory_uri() . '/js/' . $script_name . $suffix . '.js', array( 'jquery' ), filemtime( get_template_directory() . '/js/' . $ns . $script_name . $suffix . '.js' ), true );
 
-  wp_enqueue_script( 'script', get_template_directory_uri() . '/js/app.js', array (), filemtime( get_template_directory() . '/js/app.js' ), true);
+  wp_enqueue_script( 'script', get_template_directory_uri() . '/js/index.js', array (), filemtime( get_template_directory() . '/js/index.js' ), true);
 
   // Pass variables to JavaScript at runtime; see: http://codex.wordpress.org/Function_Reference/wp_localize_script
   $script_vars = apply_filters( 'voidx_script_vars', $script_vars );

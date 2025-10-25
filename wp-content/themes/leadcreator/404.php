@@ -1,12 +1,17 @@
 <?php
-  update_option('body_class', 'error-404');
-  get_header();
+  get_header(null, ['body_class' => 'page-404']);
 ?>
 
-<section class="container">
-  <div class="content">
-    <h1>Sorry, we can't locate that page.</h1>
+<section class="error--sec bg--sky">
+  <div class="container">
+    <div class="content">
+      <h1 class="heading--l">Page not found.</h1>
+      <div class="btn-wrap">
+        <a class="btn" href="/">Back to Home</a>
+      </div>
+    </div>
   </div>
 </section>
 
-<?php get_footer(); ?>
+<?php
+get_footer();

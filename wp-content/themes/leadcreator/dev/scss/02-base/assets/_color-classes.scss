@@ -1,0 +1,77 @@
+.color {
+  &--white {
+    color: $white;
+  }
+
+  &--black {
+    color: $black;
+  }
+
+  &--dark-grey {
+    color: $dark-grey;
+  }
+
+  &--sunrise {
+    color: $sunrise;
+  }
+
+  &--sunset {
+    color: $sunset;
+  }
+
+  &--sea {
+    color: $sea;
+  }
+
+  &--surf {
+    color: $surf;
+  }
+
+  &--surf-light {
+    color: $surf-light;
+  }
+
+  &--sky {
+    color: $sky;
+  }
+}
+
+.background {
+  &--white {
+    background-color: $white;
+  }
+
+  &--black {
+    background-color: $black;
+  }
+
+  &--dark-grey {
+    background-color: $dark-grey;
+  }
+
+  &--sunrise {
+    background-color: $sunrise;
+  }
+
+  &--sunset {
+    background-color: $sunset;
+  }
+
+  &--sea {
+    background-color: $sea;
+  }
+
+  &--surf {
+    background-color: $surf;
+  }
+
+  &--surf-light {
+    background-color: $surf-light;
+  }
+
+  &--sky {
+    background-color: $sky;
+  }
+
+  /* add more here */
+}

@@ -1,22 +1,35 @@
-(function($) {
+import jump from 'jump.js';
 
-  function smoothScroller() {
-    $('a[href*="#"]:not([href="#!"])').click(function() {
-      if (location.pathname.replace(/^\//, '') === this.pathname.replace(
-          /^\//, '') && location.hostname === this.hostname) {
-        var target = $(this.hash);
-        target = target.length ? target : $('[name=' + this.hash.slice(1) +
-          ']');
-        if (target.length) {
-          $('html,body').animate({
-            scrollTop: target.offset().top
-          }, 600);
-          return false;
-        }
-      }
-    });
+class SmoothScroll {
+  constructor(elem) {
+    this.links = document.querySelectorAll('a[href*="#"]:not([href="#!"])');
+
+    this.init();
   }
 
-  smoothScroller();
+  init = () => {
+    this.links.forEach((link) => {
+      link.addEventListener('click', this.handleScrollTo);
+    });
+  };
 
-}(jQuery));
+  handleScrollTo = (e) => {
+    if (
+      location.pathname.replace(/^\//, '') ===
+        e.currentTarget.pathname.replace(/^\//, '') &&
+      location.hostname === e.currentTarget.hostname
+    ) {
+      let target = document.querySelector(e.currentTarget.hash);
+
+      if (target) {
+        jump(target, {
+          duration: 500,
+        });
+
+        return false;
+      }
+    }
+  };
+}
+
+new SmoothScroll();
