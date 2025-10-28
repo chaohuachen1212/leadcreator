@@ -1,3 +1,26 @@
 header {
   background-color: $white;
+  padding: 20pxv 0;
+  border-bottom: 1pxv solid $border;
+  
+
+  .row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .logo {
+    background-color: $black;
+    display: inline-block;
+
+
+    span {
+      padding: 9pxv 15pxv;
+      color: $white;
+      font-weight: 700;
+      display: inline-block;
+    }
+  }
 }

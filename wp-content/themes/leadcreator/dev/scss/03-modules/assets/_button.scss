@@ -7,27 +7,38 @@
   line-height: 140%;
   font-family: $base-font;
   font-weight: 600;
-  color: $dark-grey;
+  color: $white;
   text-align: center;
-  background-color: $sunrise;
+  background-color: $black;
   text-decoration: none;
   letter-spacing: 0.06em;
   text-transform: none;
   user-select: none;
-
+  border: 1px solid $black;
   outline: none;
-  border: none;
   border-radius: 100px;
   box-shadow: none;
   overflow: hidden;
+  display: inline-block;
 
   z-index: 1;
   cursor: pointer;
   vertical-align: middle;
   transition: all 800ms $easing;
 
+
+  &.inverse {
+    background-color: $white;
+    color: $black;
+
+    &:hover {
+      background-color: $black;
+      color: $white;
+    }
+  }
+
   &:hover {
-    background-color: $dark-grey;
-    color: $sunrise;
+    background-color: $white;
+    color: $black;
   }
 }
