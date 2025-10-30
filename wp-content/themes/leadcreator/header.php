@@ -14,10 +14,10 @@
   <body class="<?php echo $body_class; ?>">
 
 
-    <header role="navigation">
+    <header role="navigation" id="header">
       <div class="container">
         <div class="row">
-          <a class="logo" href="">
+          <a class="logo" href="/">
             <span>C&H Website</span>
           </a>
 

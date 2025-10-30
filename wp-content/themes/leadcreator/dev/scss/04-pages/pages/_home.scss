@@ -3,3 +3,20 @@ body.page-home {
     margin-bottom: 100pxv;
   }
 }
+
+.home-form--block {
+  padding: 45pxv 0;
+  
+  h2 {
+    color: $black;
+  }
+
+  p {
+    color: $black;
+  }
+
+  .form-block {
+    max-width: 800pxv;
+    margin: 0 auto;
+  }
+}
