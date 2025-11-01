@@ -5,7 +5,7 @@ body.page-home {
 }
 
 .home-form--block {
-  padding: 45pxv 0;
+  padding: 45pxv 0 65pxv;
   
   h2 {
     color: $black;
@@ -18,5 +18,53 @@ body.page-home {
   .form-block {
     max-width: 800pxv;
     margin: 0 auto;
+  }
+
+
+  .contact-us--form {
+    margin-top: 50pxv;
+
+    input, textarea {
+      width: 100%;
+      border: 1pxv solid $border;
+      padding: 11pxv 15pxv;
+      font-size: 16pxv;
+
+      &:selection {
+        border: 1pxv solid $black;
+      }
+
+      &:focus {
+        border: 1pxv solid $black;
+        outline: 1pxv solid $black;
+      }
+    }
+
+    input[type="submit"] {
+      margin-top: 15pxv;
+      background-color: $black;
+      color: $white;
+      border: 1pxv solid $black;
+      cursor: pointer;
+      transition: 0.35s;
+      font-weight: bold;
+
+      &:hover {
+        color: $black;
+        background-color: $white;
+      }
+    }
+
+
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-bottom: 10pxv;
+
+      .half {
+        width: calc( 50% - 5pxv);
+      }
+    }
   }
 }
