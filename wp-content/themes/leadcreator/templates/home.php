@@ -6,7 +6,16 @@
 
 
 <section class="home--hero">
-  <h1>Home page</h1>
+  <div class="container">
+    <h1>We have more then 7 years building WordPess Website, headquartered in San Francisco Bay Area. We offer a professional WordPress Website and using Figma create your unique website design.</h1>
+  </div>
+</section>
+
+<section class="our--works">
+  <div class="container">
+    <h2>Our Current Works</h2>
+
+  </div>
 </section>
 
 <section class="home-form--block">

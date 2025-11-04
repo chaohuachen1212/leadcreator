@@ -2,6 +2,23 @@ body.page-home {
   .QuoteBlockSlider {
     margin-bottom: 100pxv;
   }
+
+  .home--hero {
+    padding: 85pxv 0;
+
+    h1 {
+      font-size: 32pxv;
+      color: $black;
+      font-weight: 500;
+    }
+  }
+
+  .our--works {
+    h2 {
+      font-size: 32pxv;
+      color: $black;
+    }
+  }
 }
 
 .home-form--block {
