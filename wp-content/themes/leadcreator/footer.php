@@ -7,7 +7,7 @@
         <div class="row">
           <div class="col-left">
             <a class="logo" href="/">
-              <span>C&H Website</span>
+              <span>C&H Web</span>
             </a>
 
           </div>

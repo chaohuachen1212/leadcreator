@@ -18,10 +18,10 @@
       <div class="container">
         <div class="row">
           <a class="logo" href="/">
-            <span>C&H Website</span>
+            <span>C&H Web</span>
           </a>
 
-          <a class="btn inverse" href="">Contact</a>
+          <a class="btn inverse" href="#contact">Contact</a>
         </div>
       </div>
     </header>

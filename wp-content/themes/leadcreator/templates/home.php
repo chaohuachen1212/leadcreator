@@ -14,7 +14,15 @@
 <section class="our--works">
   <div class="container">
     <h2>Our Current Works</h2>
-
+    <div class="projects-wrap">
+      <a class="project" href="https://lanternfoundationus.org/" target="_blank">
+        <img src="<?php echo GET_URI . '/img/home/lantern-foundation.webp'; ?>" alt="Image">
+        <div class="text-wrap">
+          <span>Lantern Foundation</span>
+          <?php include GET_DIR . '/img/home/arrow-right.svg'; ?>
+        </div>
+      </a>
+    </div>
   </div>
 </section>
 
@@ -24,7 +32,7 @@
       <h2>Contact us today.</h2>
       <p>We offer a professional WordPress Website and using Figma create your unique website design. Feel free to contact us for more detail, we will offer flexible packages to fit your budget.</p>
 
-      <form class="contact-us--form">
+      <form class="contact-us--form" id="contact">
       <div class="row">
         <div class="half">
           <input type="text" class="input-required" id="fname" name="entry.557545104" placeholder="First Name">
