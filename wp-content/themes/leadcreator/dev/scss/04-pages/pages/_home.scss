@@ -6,17 +6,30 @@ body.page-home {
   .home--hero {
     padding: 85pxv 0;
 
+    @include bb {
+      padding: 65pxv 0 15pxv;
+    }
+
     h1 {
       font-size: 32pxv;
       color: $black;
       font-weight: 500;
+
+
+      @include bb {
+        font-size: 28pxv;
+      }
     }
   }
 
   .our--works {
     h2 {
-      font-size: 32pxv;
+      font-size: 38pxv;
       color: $black;
+
+      @include bb {
+        font-size: 32pxv;
+      }
     }
   }
 }
@@ -44,6 +57,38 @@ body.page-home {
     width: 100%;
     transition: 0.35s;
 
+    &:not(:last-child)  {
+      margin-bottom: 45pxv;
+
+      @include bb {
+        margin-bottom: 25pxv;
+      }
+    }
+
+    &.yellow {
+      span {
+        &:after {
+          background-color: #FFF3C3;
+        }
+      }
+    }
+
+    &.dark-bg {
+      &:after {
+          content: '';
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          height: 100%;
+          width: 100%;
+          z-index: 0;
+          background: linear-gradient(11deg, rgba(0, 0, 0, .8) 0%, rgba(0, 0, 0, 0) 65%);
+        }
+      .text-wrap {
+        z-index: 1;
+      }
+    }
+
     &:hover {
       span {
         &:after {
@@ -64,7 +109,7 @@ body.page-home {
       content: '';
       height: 0;
       display: block;
-      padding-top: 56%;
+      padding-top: 52%;
     }
 
     img {
@@ -114,6 +159,7 @@ body.page-home {
         background-color: #F38B30;
         width: 5pxv;
         height: 100%;
+        z-index: 1;
       }
       
     }
@@ -122,9 +168,20 @@ body.page-home {
 
 .home-form--block {
   padding: 45pxv 0 100pxv;
+
+  @include bb {
+    padding: 35pxv 0 80pxv;
+  }
   
   h2 {
     color: $black;
+    margin-bottom: 45pxv;
+    font-size: 38pxv;
+
+    @include bb {
+      font-size: 32pxv;
+      margin-bottom: 30pxv;
+    }
   }
 
   p {

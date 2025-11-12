@@ -7,7 +7,7 @@
 
 <section class="home--hero">
   <div class="container">
-    <h1>We have more then 7 years building WordPess Website, headquartered in San Francisco Bay Area. We offer a professional WordPress Website and using Figma create your unique website design.</h1>
+    <h1>With over 7 years of experience building WordPress websites, we are proud to be headquartered in the San Francisco Bay Area. Our team specializes in creating professional, high-quality WordPress websites tailored to your business needs. Using Figma, we design unique, modern, and user-friendly website layouts that bring your brand to life.</h1>
   </div>
 </section>
 
@@ -22,6 +22,13 @@
           <?php include GET_DIR . '/img/home/arrow-right.svg'; ?>
         </div>
       </a>
+      <a class="project yellow dark-bg" href="https://hlrental.com/" target="_blank">
+        <img src="<?php echo GET_URI . '/img/home/hl-rental-llc.webp'; ?>" alt="Image">
+        <div class="text-wrap">
+          <span>H&L Rental LLC</span>
+          <?php include GET_DIR . '/img/home/arrow-right.svg'; ?>
+        </div>
+      </a>
     </div>
   </div>
 </section>
@@ -29,8 +36,10 @@
 <section class="home-form--block">
   <div class="container">
     <div class="form-block">
-      <h2>Contact us today.</h2>
-      <p>We offer a professional WordPress Website and using Figma create your unique website design. Feel free to contact us for more detail, we will offer flexible packages to fit your budget.</p>
+      <h2>Contact us today</h2>
+      <p>Looking for a stunning, high-performing website? We specialize in custom WordPress websites, designed from scratch using Figma to perfectly reflect your brand’s identity.</p>
+      <p>Whether you need a personal portfolio, business site, or eCommerce store, we provide flexible packages tailored to fit your goals and budget.</p>
+      <p>Contact us today to discuss your project and bring your vision to life!</p>
 
       <form class="contact-us--form" id="contact">
       <div class="row">
