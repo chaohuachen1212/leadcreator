@@ -72,7 +72,7 @@
       <div class="container">
         <div class="row">
           <a class="logo" href="/">
-            <span>C&H Web</span>
+            <span>C&H Creator</span>
           </a>
 
           <a class="btn inverse" href="#contact">Contact</a>

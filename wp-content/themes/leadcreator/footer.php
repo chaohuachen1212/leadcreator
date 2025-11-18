@@ -7,7 +7,7 @@
         <div class="row">
           <div class="col-left">
             <a class="logo" href="/">
-              <span>C&H Web</span>
+              <span>C&H Creator</span>
             </a>
 
           </div>
@@ -35,7 +35,7 @@
           </div>
         </div>
 
-        <p class="note">© C&H Web 2025 all rights reserved.</p>
+        <p class="note">© C&H Creator 2025 all rights reserved.</p>
 
       </div>
     </footer>
