@@ -29,13 +29,13 @@
 
           <div class="right-col">
             <p><strong>Email:</strong></p>
-            <p>hugo@c&hwebsite@mail.com</p>
+            <p>hugo@c&hweb@mail.com</p>
             <p><strong>Phone</strong></p>
             <p>(415) 672-6821</p>
           </div>
         </div>
 
-        <p class="note">© C&H Website 2025 all rights reserved.</p>
+        <p class="note">© C&H Web 2025 all rights reserved.</p>
 
       </div>
     </footer>

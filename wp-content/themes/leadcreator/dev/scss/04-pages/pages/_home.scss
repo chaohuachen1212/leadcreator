@@ -138,6 +138,11 @@ body.page-home {
         opacity: 0;
         visbility: hidden;
         transition: 0.35s;
+
+        @include bb {
+          width: 25pxv;
+          margin-left: 13pxv;
+        }
       }
     }
 
@@ -149,7 +154,7 @@ body.page-home {
       transition: 0.35s;
 
       @include bb {
-        font-size: 25pxv;
+        font-size: 23pxv;
       }
 
       &::after {
@@ -160,6 +165,11 @@ body.page-home {
         width: 5pxv;
         height: 100%;
         z-index: 1;
+
+        @include bb {
+          width: 3pxv;
+          left: -18pxv;
+        }
       }
       
     }
