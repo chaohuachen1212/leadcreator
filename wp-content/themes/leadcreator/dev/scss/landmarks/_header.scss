@@ -1,3 +1,158 @@
+.eyebrow {
+  height: 0;
+  width: 100%;
+  background: $black;
+  color: $white;
+  position: relative;
+  transition: all 350ms ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.2em;
+
+  p {
+    a {
+      color: $white;
+
+      &:hover {
+        border-bottom: none;
+      }
+    }
+  }
+
+  @include bb {
+    padding: 0 25pxv;
+    font-size: 16pxv;
+  }
+
+  &__color-text {
+    text-transform: uppercase;
+    font-family: $base-font;
+    font-size: 18pxv;
+
+    @include bb {
+      display: block;
+      font-size: 12pxv;
+      margin-bottom: 8pxv;
+    }
+  }
+
+  .alert-banner-content {
+    @include bb {
+      width: 100%;
+    }
+  }
+
+  &__icon {
+    width: 193pxv;
+    height: 114pxv;
+    padding: 6pxv 0 6pxv 12pxv;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include bb {
+      display: none;
+    }
+
+    & svg {
+      width: 100%;
+      height: auto;
+
+    }
+  }
+
+  &__text-container {
+    display: flex;
+    align-items: center;
+
+    @include bb {
+      margin-right: 30pxv;
+      flex-direction: column;
+    }
+  }
+
+  &__heading {
+    font-family: $headingFont;
+    padding: 0 10pxv;
+    display: inline-block;
+    font-size: 18pxv;
+    transition: all 400ms ease;
+
+    @include bb {
+      width: 100%;
+      font-size: 12pxv;
+      line-height: 1.2;
+      padding-left: 0;
+    }
+  }
+
+  &__copy {
+    font-family: $headingFont;
+    margin-top: 7pxv;
+    display: inline-flex;
+    align-items: center;
+    color: $white;
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    & svg {
+      margin-left: 5pxv;
+      margin-top: 2pxv;
+
+      path {
+        fill: $white;
+      }
+    }
+
+    @include bb {
+      line-height: 1.2;
+    }
+  }
+
+  .close-eyebrow {
+    top: 25pxv;
+    right: 27pxv;
+    cursor: pointer;
+    position: absolute;
+
+    @include bb {
+      top: 15pxv;
+      right: 20pxv;
+    }
+  }
+
+  .eyebrow__color-text,
+  .eyebrow__copy,
+  .eyebrow__copy svg path {
+    transition: all 400ms ease;
+  }
+
+  &.is-active {
+    .eyebrow__color-text,
+    .eyebrow__copy {
+      color: #e81e25;
+
+      svg {
+        path {
+          fill: #e81e25;
+        }
+      }
+    }
+  }
+
+  &.is-hidden {
+    padding: 0;
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+
 header {
   background-color: $white;
   padding: 20pxv 0;
