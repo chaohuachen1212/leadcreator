@@ -28,8 +28,6 @@
           </div>
 
           <div class="right-col">
-            <p><strong>Email:</strong></p>
-            <p>hugo@c&hweb@mail.com</p>
             <p><strong>Phone</strong></p>
             <p>(415) 672-6821</p>
           </div>

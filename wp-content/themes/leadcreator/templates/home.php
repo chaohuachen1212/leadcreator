@@ -13,7 +13,11 @@
 
 <section class="our--works">
   <div class="container">
-    <h2>Our Current Works</h2>
+    <div class="top-wrap">
+      <h2>Our Current Works</h2>
+      <p>Lantern Foundation and H&L Rental LLC are ongoing web projects, and our clients are exploring additional design ideas that align with their budgets. If you don’t have a specific design in mind, no worries—using the content you’ve provided, we can present multiple design options for you to choose from. We can build any web components and functionalities you need for your site.</p>
+    </div>
+
     <div class="projects-wrap">
       <a class="project" href="https://lanternfoundationus.org/" target="_blank">
         <img src="<?php echo GET_URI . '/img/home/lantern-foundation.webp'; ?>" alt="Image">
@@ -55,7 +59,7 @@
           <input type="text" name="entry.1502570712" placeholder="Phone">
         </div>
         <div class="half">
-          <input type="email" name="entry.1924665115" placeholder="Email">
+          <input type="email" class="input-required" name="entry.1924665115" placeholder="Email">
         </div>
       </div>
 

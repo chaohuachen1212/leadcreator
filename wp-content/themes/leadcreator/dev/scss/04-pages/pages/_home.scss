@@ -41,6 +41,30 @@ body.page-home {
       margin: 45pxv 0;
     }
 
+    h2 {
+      color: $black;
+      margin-bottom: 25pxv;
+      font-size: 38pxv;
+
+      @include bb {
+        font-size: 32pxv;
+        margin-bottom: 20pxv;
+      }
+    }
+
+
+  .top-wrap {
+    p {
+      font-size: 18pxv;
+      line-height: 1.5;
+      color: $black;
+
+      @include bb {
+        font-size: 16pxv;
+      }
+    }
+  }
+
   .projects-wrap {
     display: flex;
     flex-wrap: wrap;
@@ -196,6 +220,11 @@ body.page-home {
 
   p {
     color: $black;
+    font-size: 18pxv;
+
+    @include bb {
+      font-size: 16pxv;
+    }
   }
 
   .form-block {
@@ -220,6 +249,12 @@ body.page-home {
       &:focus {
         border: 1pxv solid $black;
         outline: 1pxv solid $black;
+      }
+    }
+
+    .half {
+      &.invalid {
+        border: 1pxv solid $red;
       }
     }
 
