@@ -166,6 +166,57 @@ header {
     align-items: center;
   }
 
+  .right-col {
+    display: flex;
+    align-items: center;
+
+    .phone-number {
+      color: $black;
+      margin-right: 20pxv;
+      position: relative;
+
+      @include bb {
+        display: none;
+      }
+
+
+      &:hover::before {
+          width: 100%;
+          background: $black;
+          transition: width 400ms ease;
+      }
+
+      &:hover::after {
+          width: 100%;
+          background: transparent;
+          transition: all 0s ease;
+      }
+
+      &:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 1px;
+        width: 0;
+        transition: width 0s ease, background 400ms ease;
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        height: 1px;
+        width: 0;
+        background: $black;
+        transition: width 400ms ease;
+      }
+
+
+    }
+  }
+
   .logo {
     background-color: $black;
     display: inline-block;

@@ -27,9 +27,9 @@
             </a>
           </div>
 
-          <div class="right-col">
-            <p><strong>Phone</strong></p>
-            <p>(415) 672-6821</p>
+          <div class="col-right">
+            <p><strong>Phone:</strong></p>
+            <a href="tel:4156726821">(415) 672-6821</a>
           </div>
         </div>
 

@@ -74,8 +74,10 @@
           <a class="logo" href="/">
             <span>C&H Creator</span>
           </a>
-
-          <a class="btn inverse" href="#contact">Contact</a>
+          <div class="right-col">
+            <a class="phone-number" href="tel:4156726821">(415) 672-6821</a>
+            <a class="btn inverse" href="#contact">Contact</a>
+          </div>
         </div>
       </div>
     </header>
