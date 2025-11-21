@@ -7,7 +7,7 @@
         <div class="row">
           <div class="col-left">
             <a class="logo" href="/">
-              <span>C&H Creator</span>
+              <img src="<?php echo GET_URI . '/img/logo-black.png'; ?>" alt="Logo">
             </a>
 
           </div>

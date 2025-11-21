@@ -18,12 +18,19 @@ footer {
 
 
   .logo {
-    background-color: $white;
     display: inline-block;
     margin-bottom: 20pxv;
 
     @include bb {
       margin-bottom: 0;
+    }
+
+    img {
+      width: 80pxv;
+
+      @include bb {
+        width: 60pxv;
+      }
     }
 
 

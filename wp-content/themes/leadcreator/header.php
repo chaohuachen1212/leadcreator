@@ -4,7 +4,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 <meta charset="<?php bloginfo( 'charset' ); ?>" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/img/favicon.ico" />
+<link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/img/logo.png" />
 <title><?php wp_title( '-', true, 'right' ); ?></title>
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
@@ -72,7 +72,7 @@
       <div class="container">
         <div class="row">
           <a class="logo" href="/">
-            <span>C&H Creator</span>
+            <img src="<?php echo GET_URI . '/img/logo.png'; ?>" alt="Logo">
           </a>
           <div class="right-col">
             <a class="phone-number" href="tel:4156726821">(415) 672-6821</a>

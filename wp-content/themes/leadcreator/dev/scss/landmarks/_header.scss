@@ -218,9 +218,15 @@ header {
   }
 
   .logo {
-    background-color: $black;
     display: inline-block;
 
+    img {
+      width: 80pxv;
+
+      @include bb {
+        width: 60pxv;
+      }
+    }
 
     span {
       padding: 9pxv 15pxv;
