@@ -3,3 +3,4 @@ import './modules/smooth-scroll';
 import './modules/form';
 import './modules/header';
 import './modules/eyebrow';
+import './modules/home';

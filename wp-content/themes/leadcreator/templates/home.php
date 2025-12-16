@@ -19,20 +19,20 @@
     </div>
 
     <div class="projects-wrap">
-      <a class="project" href="https://lanternfoundationus.org/" target="_blank">
+      <div class="project" data="<?php echo GET_URI . '/img/lantern-foundation.webp'; ?>" >
         <img src="<?php echo GET_URI . '/img/home/lantern-foundation.webp'; ?>" alt="Image">
         <div class="text-wrap">
           <span>Lantern Foundation</span>
           <?php include GET_DIR . '/img/home/arrow-right.svg'; ?>
         </div>
-      </a>
-      <a class="project yellow dark-bg" href="https://hlrental.com/" target="_blank">
+      </div>
+      <div class="project yellow dark-bg" data="<?php echo GET_URI . '/img/hl-rental.webp'; ?>" >
         <img src="<?php echo GET_URI . '/img/home/hl-rental-llc.webp'; ?>" alt="Image">
         <div class="text-wrap">
           <span>H&L Rental LLC</span>
           <?php include GET_DIR . '/img/home/arrow-right.svg'; ?>
         </div>
-      </a>
+      </div>
     </div>
   </div>
 </section>
@@ -70,6 +70,14 @@
   </div>
 </section>
 
+  <div class="video--popup-block">
+    <div class="container">
+      <img src="<?php echo GET_URI . '/img/lantern-foundation.webp'; ?>" alt="Image">
+    </div>
 
+    <div class="close">
+      <span>&times</span>
+    </div>
+  </div>
 
 <?php get_footer(); ?>

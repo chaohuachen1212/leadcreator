@@ -80,6 +80,8 @@ body.page-home {
     display: block;
     width: 100%;
     transition: 0.35s;
+    cursor: pointer;
+
 
     &:not(:last-child)  {
       margin-bottom: 45pxv;
@@ -285,4 +287,64 @@ body.page-home {
       }
     }
   }
+}
+
+
+.video--popup-block {
+  position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(36, 32, 32, 0.6);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+    z-index: 99;
+    display: none;
+
+    &.is-active {
+      display: block;
+      opacity: 1;
+      visibility: visible;
+    }
+
+
+    img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: auto;
+      max-height: 80vh;
+      transform: translate(-50%, -50%);
+      transform-origin: center center;
+      transition: transform 0.5s;
+
+      @include bb {
+        max-height: 80vh;
+        width: 90%;
+      }
+    }
+
+    .close {
+      position: absolute;
+      right: 5%;
+      top: 35pxv;
+      cursor: pointer;
+
+      @include bb {
+        top: 15pxv;
+      }
+
+      span {
+        color: $white;
+        font-size: 45pxv;
+      }
+
+      &:hover {
+        span {
+          opacity: 0.5;
+        }
+      }
+    }
 }
