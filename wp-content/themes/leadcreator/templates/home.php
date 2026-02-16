@@ -19,14 +19,14 @@
     </div>
 
     <div class="projects-wrap">
-      <div class="project" data="<?php echo GET_URI . '/img/lantern-foundation.webp'; ?>" >
+      <div class="project" data="<?php echo GET_URI . '/img/lantern-foundation.webp'; ?>" data-url="https://lanternfoundationus.org/" >
         <img src="<?php echo GET_URI . '/img/home/lantern-foundation.webp'; ?>" alt="Image">
         <div class="text-wrap">
           <span>Lantern Foundation</span>
           <?php include GET_DIR . '/img/home/arrow-right.svg'; ?>
         </div>
       </div>
-      <div class="project yellow dark-bg" data="<?php echo GET_URI . '/img/hl-rental.webp'; ?>" >
+      <div class="project yellow dark-bg" data="<?php echo GET_URI . '/img/hl-rental.webp'; ?>" data-url="https://hlrental.com/berkeley-rental/" >
         <img src="<?php echo GET_URI . '/img/home/hl-rental-llc.webp'; ?>" alt="Image">
         <div class="text-wrap">
           <span>H&L Rental LLC</span>
@@ -72,7 +72,9 @@
 
   <div class="video--popup-block">
     <div class="container">
+      <a class="page-link" href="" target="_blank">
       <img src="<?php echo GET_URI . '/img/lantern-foundation.webp'; ?>" alt="Image">
+      </a>
     </div>
 
     <div class="close">
